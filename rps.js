@@ -65,10 +65,15 @@ function game() {
         }
     }
 
-    if (playerCounter > computerChoice) {
+    if (playerCounter > computerCounter) {
         console.log("You Win the game!");
     }
     else if (playerCounter < computerCounter) {
         console.log("You lost the game!");
     }
+    else {
+        console.log("Draw!")
+    }
 }
+
+game()
