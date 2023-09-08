@@ -32,3 +32,17 @@ function playRound(playerChoice, computerChoice) {
     }
 }
 
+function getPlayerChoice() {
+    while (true) {
+        let playerChoice = prompt("Rock Paper Scissors: ")
+        if (playerChoice.toLowerCase() == "rock" ||
+            playerChoice.toLowerCase() == "paper" ||
+            playerChoice.toLowerCase() == "scissors") 
+        {
+            return playerChoice
+        }
+        else {
+            console.log("Please, input a valid hand. (Rock, Paper or Scissors)")
+        }
+    }
+}
