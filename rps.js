@@ -64,4 +64,11 @@ function game() {
             computerCounter++
         }
     }
+
+    if (playerCounter > computerChoice) {
+        console.log("You Win the game!");
+    }
+    else if (playerCounter < computerCounter) {
+        console.log("You lost the game!");
+    }
 }
