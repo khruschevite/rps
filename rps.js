@@ -13,7 +13,22 @@ function getComputerChoice() {
     return hand
 }
 
-
 function capitalize(string) {
     return string.charAt(0).toUpperCase() + string.slice(1)
 }
+
+function playRound(playerChoice, computerChoice) {
+    playerChoice = playerChoice.toLowerCase()
+    if (playerChoice == computerChoice) {
+        return `Draw! Both used ${capitalize(playerChoice)}`
+    }
+    else if (playerChoice == "rock" && computerChoice == "scissors" ||
+             playerChoice == "paper" && computerChoice == "rock" ||
+             playerChoice == "scissors" && computerChoice == "paper") {
+                return `You win! ${capitalize(playerChoice)} beats ${capitalize(computerChoice)}`
+             }
+    else {
+        return `You lose! ${capitalize(computerChoice)} beats ${capitalize(playerChoice)}`
+    }
+}
+
