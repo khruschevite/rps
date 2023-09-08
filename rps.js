@@ -56,6 +56,12 @@ function game() {
     for (let i = 0; i<5; i++){
         let computerChoice = getComputerChoice()
         let playerChoice = getPlayerChoice()
-        
+        score = playRound(playerChoice, computerChoice)
+        if (score == 'win') {
+            playerCounter++
+        }
+        else if (score == 'lose') {
+            computerCounter++
+        }
     }
 }
