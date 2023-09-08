@@ -20,15 +20,18 @@ function capitalize(string) {
 function playRound(playerChoice, computerChoice) {
     playerChoice = playerChoice.toLowerCase()
     if (playerChoice == computerChoice) {
-        return `Draw! Both used ${capitalize(playerChoice)}`
+        console.log(`Draw! Both used ${capitalize(playerChoice)}`)
+        return 'draw'
     }
     else if (playerChoice == "rock" && computerChoice == "scissors" ||
              playerChoice == "paper" && computerChoice == "rock" ||
              playerChoice == "scissors" && computerChoice == "paper") {
-                return `You win! ${capitalize(playerChoice)} beats ${capitalize(computerChoice)}`
+                console.log(`You win! ${capitalize(playerChoice)} beats ${capitalize(computerChoice)}`)
+                return 'win'
              }
     else {
-        return `You lose! ${capitalize(computerChoice)} beats ${capitalize(playerChoice)}`
+        console.log(`You lose! ${capitalize(computerChoice)} beats ${capitalize(playerChoice)}`)
+        return 
     }
 }
 
@@ -44,5 +47,15 @@ function getPlayerChoice() {
         else {
             console.log("Please, input a valid hand. (Rock, Paper or Scissors)")
         }
+    }
+}
+
+function game() {
+    let playerCounter = 0
+    let computerCounter = 0
+    for (let i = 0; i<5; i++){
+        let computerChoice = getComputerChoice()
+        let playerChoice = getPlayerChoice()
+        
     }
 }
